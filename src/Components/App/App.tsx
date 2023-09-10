@@ -1,6 +1,7 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, Fragment, useEffect } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import './App.css';
+
 import { Navigation } from '../Navigation/Navigation';
 import { Articles } from '../Articles/Articles';
 import { ArticleItem } from '../ArticleItem/ArticleItem';
@@ -13,7 +14,7 @@ export const App: FC = () => {
   }, [pathname]);
 
   return (
-    <React.Fragment>
+    <Fragment>
       <header className="header">
         <div className="container">
           <Navigation placement="header" className="header__navigation" />
@@ -48,6 +49,6 @@ export const App: FC = () => {
           </div>
         </div>
       </footer>
-    </React.Fragment>
+    </Fragment>
   );
 };
