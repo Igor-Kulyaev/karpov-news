@@ -1,0 +1,9 @@
+.logo {
+  display: block;
+  width: 154px;
+}
+
+.logo__image {
+  width: 100%;
+  display: block;
+}
