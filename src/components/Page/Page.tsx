@@ -4,10 +4,10 @@ import './Page.css';
 import { Navigation } from '@components/Navigation/Navigation';
 import { Logo } from '@components/Logo/Logo';
 import { EmailModal } from '@features/subscribeNotification/components/EmailModal/EmailModal';
-import { ColorSchemeSwitcher } from '@features/colorScheme/components/ColorSchemeSwitcher/ColorSchemeSwitcher';
 import { Dispatch } from '@app/store';
 import { fetchCategories } from '@features/categories/actions';
 import { fetchSources } from '@features/sources/actions';
+import { Header } from '@components/Header/Header';
 
 const LS_EMAIL_SHOWN_KEY = 'newsfeed:email_modal_shown';
 
@@ -31,15 +31,7 @@ export const Page: FC = ({ children }) => {
       >
         Hello
       </EmailModal>
-      <header className="header">
-        <div className="container header__container">
-          <Logo />
-          <Navigation className="header__navigation" />
-          <div className="header__controls" style={{ transform: 'translateX(0)' }}>
-            <ColorSchemeSwitcher />
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main>{children}</main>
 
